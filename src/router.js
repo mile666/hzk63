@@ -1,6 +1,5 @@
 // 路由模块
 
-
 import React, { Component } from 'react'
 import { 
   BrowserRouter as Router, 
@@ -12,8 +11,8 @@ import {
   NavLink 
 } from 'react-router-dom'
 import Login from './components/login/login'
-import Home from './components/home/home'
 
+import Home from './components/home/home'
 
 class RouterCom extends Component {
   constructor(props) {
@@ -26,7 +25,7 @@ class RouterCom extends Component {
       <Switch>
         <Route exact path="/login" component={Login} />
         <Route exact path="/" component={Home} />
-        <Redirect to="/login"/>
+        <Redirect to="/login" />
       </Switch>
     </Router>
     )

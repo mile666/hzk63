@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //问题:
+    let arr = ["a","b","c","d","e","f","g",'z']
+    // 要的是什么?[["a","b"],["c","d"],["e","f","g"]] 
+
+    // splice(index,长度)
+    const fn = (arr,...rest)=>{
+      // console.log(rest) [2,2,3]
+      let resArr = []
+      for (let i = 0; i < rest.length ; i++) {
+      // let arrrest = arr.splice(0,rest[i])
+      // ["a","b"]
+      // arrNews.push(arrrest)
+        resArr.push(arr.splice(0,rest[i]))
+      }
+      return resArr
+    }
+    
+    // let res = fn(arr,2,2,3)
+    // console.log(res)
+    let res = fn(arr,1,5,2)  //保证传的和,和数组长度一样即可
+    console.log(res)
+    // let arrb = fn(arr,2,3,4)
+    // 遍历->3次
+
+  </script>
+</body>
+</html>
